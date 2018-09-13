@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/switch/switch",
+    "pages/plotselect/plotselect",
+    "pages/parkdetail/parkdetail",
+    "pages/account/account",
+    "pages/electricize/electricize",
+    "pages/myrechargelog/myrechargelog",
+    "pages/myinfo/myinfo",
+    "pages/bindinfo/bindinfo",
+    "pages/wallet/wallet",
+    "pages/rule/rule",
+    "pages/repair/repair",
+    "pages/chargeRule/chargeRule",
+    "pages/protocol/protocol",
+    "pages/rechargeCash/rechargeCash",
+    "pages/rechargeMonth/rechargeMonth"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": "50",
+    "backgroundColor": "#ffffff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

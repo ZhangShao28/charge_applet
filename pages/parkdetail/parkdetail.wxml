@@ -1,0 +1,51 @@
+<!--pages/parkdetail/parkdetail.wxml-->
+<view class='container'>
+    <view class='content'>
+      <view class='header'>
+      <image class='loactionImg' src='../../images/parkdetail/localize@2x.png'></image>
+      <view class='park_name'>{{park_name}}</view>
+    </view>
+    <view class='charge_list' bindtap='select_item' wx:for='{{chargelist}}' wx:key='{{index}}' data-id='{{index}}' id='{{item.use_status}}' data-device_id='{{item.device_id}}' data-device_no='{{item.device_no}}'>
+      <view class='num'>{{item.device_no}}</view>
+       <block  wx:if='{{index == select_id}}'>
+          <block wx:if='{{item.use_status == 1}}' >
+            <image class='select_charge' src='{{select_charge}}'></image>
+            <view class='state' style='color:{{select_colors}}'>空置</view>
+          </block>
+          <!-- <block wx:elif='{{item.use_status == 2}}'>
+          <image class='select_charge' src='{{charge}}'></image>
+          <view class='state' style='color:{{colors}}'>{{state_use}}</view>
+          </block>
+          <block wx:elif='{{item.use_status == 3}}'>
+          <image class='select_charge' src='{{charge}}'></image>
+          <view class='state' style='color:{{colors}}'>{{state_gz}}</view>
+          </block> -->
+      </block>
+       <block  wx:else>
+            <block wx:if='{{item.use_status == 1}}' >
+            <image class='select_charge' src='../../images/parkdetail/vacancy@2x.png'></image>
+            <view class='state' style='color:{{colors_vacancy}}'>空置</view>
+          </block>
+          <block wx:elif='{{item.use_status == 2}}'>
+          <image class='select_charge' src='{{charge_use}}'></image>
+          <view class='state' style='color:{{colors_use}}'>使用中</view>
+          </block>
+          <block wx:elif='{{item.use_status == 3}}'>
+          <image class='select_charge' src='{{charge}}'></image>
+          <view class='state' style='color:{{colors}}'>离线</view>
+          </block>
+      </block>
+    </view>
+  </view>
+  <view class='zh'>-----</view>
+  <view class='footer'>
+    <view>
+        <view class='begin_btn btn btn_ccc' bindtap='{{begin_btn_isno?"begin_btn":""}}' wx:if='{{btn_on==0}}'>开始充电</view>
+          <form bindsubmit='begin_Submit' report-submit='true'>
+          <button bindtap='{{begin_btn_isno?"begin_btn":""}}' class='begin_btn btn' wx:if='{{btn_on==1}}' form-type="submit" hover-class="none">
+            开始充电
+          </button>
+     </form>
+    </view>
+  </view> 
+</view>

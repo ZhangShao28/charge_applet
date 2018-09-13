@@ -1,0 +1,120 @@
+<!--pages/electricize/electricize.wxml-->
+<!-- 连接设备 -->
+<view class='container' wx:if='{{connet_state==0}}'>
+    <!-- <image class='load_img' src='../../images/electricize/loading.png'></image> -->
+      <view class='state0'>
+          <image  src='{{state0_img}}'></image>
+      </view>
+       <view class='failure_content'>
+        <view class='load'>{{connet_txt}}</view>
+      </view> 
+</view>
+<!-- 连接成功 -->
+<view class='container bg_f3f3' wx:if='{{connet_state==1}}'>
+  <view class='content'>
+    <view class='content_top'>
+      <view class='tit'>{{park_locat}}</view>
+    </view>
+    <view class='content_img'> 
+        <image  src='{{state1_src}}'></image>
+    </view>
+    <view class='content_bottom'>
+      <view class='content_bottom_left'> 
+        <view>{{device_no}}</view>
+        <view class='tit'>插座号</view>
+      </view>
+      <view class='content_bottom_right'>
+        <view>{{hour}}<label class='tit'>小时</label>{{minute}}<label class='tit'>分</label>{{second}}<label class='tit'>秒</label></view>
+        <view class='tit'>已充电时间</view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+     <view class='tits'>(电动车充电期间，免费为您提供手机充电)</view> 
+    <!-- <image class='recharge_btn' bindtap='over_btn' src='../../images/electricize/End-of-the-charging@2x.png'></image> -->
+    <view class='recharge_btn btn'  bindtap='{{over_btn_isno?"over_btn":" "}}'>结束充电</view>
+    <view class='footer_tit'>
+    <image class='dot' src='../../images/recharge/dot.png'></image>
+   充满电或拔掉电源后，自动结束计费;
+    </view>
+    <view class='footer_tit'>
+    <image class='dot' src='../../images/recharge/dot.png'></image>
+    在小程序上按“结束充电”可停止充电。
+    </view>
+    <view class='repairs'>
+      <view class='tit' bindtap='go_repair'>故障报修</view>
+      <view class='num'>客服电话：{{phone}}</view>
+    </view>
+  </view>
+</view>
+<!-- 连接失败 -->
+<view class='container'  wx:if='{{connet_state==2}}'>
+     <!-- <image class='failure_img' src='../../images/electricize/loading.png'></image>  -->
+    <view class='state2'>
+        <image animation="{{animationData2}}" src='{{state2_img}}'></image>
+    </view>
+    <view class='failure_content'>
+      <view class='failure_tit'>{{state2_txt}}</view>
+          <view class='again_btn btn' wx:if='{{state2_btn_show==1}}' bindtap='begin_connet' >{{state2_btn}}</view>
+            <view class='again_btn btn btn_no'  wx:if='{{state2_btn_show==2}}'>{{state2_btn}}</view>
+      <view class='check_tit'><label class='xt'></label><label class='tit'>可能原因</label><label class='xt'></label></view>
+    </view>
+    <view class='guzhang'>
+      <view>
+      1.充电器未插入插座
+      </view>
+       <view>
+      2.充电器故障
+      </view>
+      <view>
+      3.功率过大
+      </view>
+      <view>
+      4.插座故障<label class='baoxiu' bindtap='go_repair'><text decode='true'>&nbsp;&nbsp;去报修</text></label>
+      </view>
+    </view>
+    <view class='kefu_info'>
+      <label class='kefu_left' bindtap='go_property_kefu'> 
+      <image src='../../images/electricize/telephone@3x.png'></image><label>物业电话</label></label>
+      <label class='kefu_right' bindtap='go_our_kefu' wx:if='{{is_no==1}}'> <image src='../../images/electricize/Customer-service@2x.png'></image><label>平台客服</label></label>
+       <!-- <contact-button class='kefu_btn'  type="default-dark" size="27" session-from="weapp"></contact-button> -->
+    </view>
+</view>
+<view class='container bg_f3' wx:if='{{connet_state==3}}'>
+    <image src='../../images/charging@2x.png'></image>
+    <view class='tit_none'>今日您的充电次数已用完</view>
+    <view class='tit_nones'>月卡用户，每日最多可充值2次</view>
+</view>
+<view class='container bg_f3' wx:if='{{connet_state==4}}'>
+    <image src='../../images/The-motorcycle@2x.png'></image>
+    <view class='tit_none'>服务器正在维护中，暂时无法充电</view>
+</view>
+<!-- 扫码充电 -->
+<view class=' saoma' wx:if='{{connet_state == 5}}'>
+  
+       <view class='canvas_saoma'>
+       <image class='bg'  src='../../images/electricize/electricity.gif'></image>
+         <!-- <image class='bg'  src='../../images/electricize/round@2x.png'></image>
+         <image class='top' animation="{{animationData1}}" src='../../images/electricize/electricity@2x.png'></image>
+         <image class='bottom' animation="{{animationData2}}" src='../../images/electricize/charge@2x.png'></image> -->
+      </view>
+
+      <view class='footer saoma_footer'>
+       <form bindsubmit='Scan_Submits' report-submit='true'>
+            <button  class='recharge_btn btn' bindtap='{{begin_btn?"begin_btn":""}}' form-type="submit" hover-class="none">开始充电                    </button>
+    </form>
+        <view class='footer_tit'>
+        <image class='dot' src='../../images/recharge/dot.png'></image>
+            充满电或拔掉电源后，自动结束计费;
+        </view>
+        <view class='footer_tit'>
+        <image class='dot' src='../../images/recharge/dot.png'></image>
+            在小程序上按“结束充电”可停止充电。
+        </view>
+        <!-- <view class='saoma_footer_bottom'>
+          <view>月卡收费标准</view>
+        </view> -->
+      </view> 
+</view>
+
+     

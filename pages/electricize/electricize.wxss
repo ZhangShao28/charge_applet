@@ -1,0 +1,276 @@
+/* pages/electricize/electricize.wxss */
+.content{
+  background: #fff;
+  height: 800rpx;
+  /* text-align: center */
+}
+.content .content_top{
+  /* margin-top: 18rpx; */
+  font-size: 36rpx;
+  text-align: center
+}
+.content .content_top .tit{
+  color: #666;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx
+}
+.content .content_img{
+  margin-bottom: 16rpx;
+  height: 520rpx;
+}
+.bg_f3f3{
+  background: #f3f3f3
+}
+.state0{
+  text-align: center;
+  padding-top: 120rpx
+}
+.state0 image{
+  width: 332rpx;
+  height: 337rpx;
+
+}
+
+.content .content_img{
+  text-align: center
+}
+.content .content_img image{
+  width: 498rpx;
+  height: 494rpx;
+  margin-top: 10rpx
+}
+.content .content_bottom{
+  font-size: 40rpx;
+  text-align: center
+}
+.content .content_bottom_left,.content .content_bottom_right{
+  display: inline-block;
+  height: 138rpx;
+  border-top: 1rpx solid #e5e5e5;
+  width: 50%;
+  padding-top: 30rpx
+}
+.content .content_bottom_left .tit,.content .content_bottom_right .tit{
+  font-size: 30rpx
+}
+
+.footer{
+  text-align: center;
+  padding-bottom: 30rpx;
+  background: #fff;
+  margin-top: 21rpx
+}
+.footer .tits{
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 20rpx;
+  padding-top: 10rpx;
+}
+.footer .repairs{
+  text-align: right;
+  margin-right: 34rpx
+}
+.footer .repairs .tit{
+  font-size: 30rpx;
+  color: #666
+}
+.footer .repairs .num{
+  font-size: 26rpx;
+  color: #999
+}
+.footer .recharge_btn{
+  width: 641rpx;
+ margin: 20rpx auto
+}
+.footer .footer_tit{
+  text-align: left;
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 54rpx;
+  
+}
+.footer .footer_tit .dot{
+  width: 11rpx;
+  height: 11rpx;
+  position: relative;
+  top: -4rpx
+}
+/* 正在连接 */
+.container{
+  /* text-align: center; */
+  display: block;
+  background: #fff;
+}
+.container .load_img{
+  width:310rpx;
+  height: 310rpx;
+  margin: 108rpx auto 132rpx
+}
+.container .load{
+  font-size: 36rpx;
+  color: #666;
+  padding-top: 132rpx
+}
+/* 连接失败 */
+.state2{
+  text-align: center;
+  padding-top: 110rpx
+}
+.state2 image{
+    width: 332rpx;
+    height: 328rpx
+}
+.container .again_btn{
+  width: 500rpx;
+  margin: 0 auto
+}
+.container .btn_no{
+  background: #e5e5e5
+}
+.container .failure_img{
+  width:310rpx;
+  height: 310rpx;
+  margin: 108rpx auto 40rpx
+}
+.container .failure_tit{
+  font-size: 32rpx;
+  color: #666;
+  margin-bottom: 50rpx;
+  padding-top: 50rpx;
+}
+.failure_content{
+  text-align: center
+}
+.container .xt{
+   border-top: 1rpx solid #e5e5e5;
+  width: 152rpx;
+  display: inline-block;
+  position: relative;
+  top: -8rpx
+}
+.container .check_tit{
+  margin: 61rpx auto 50rpx auto
+}
+.container .check_tit .tit{
+  font-size: 28rpx;
+  color: #666;
+  margin: 0 30rpx
+}
+.container .check_img{
+  width:141rpx;
+  height: 141rpx
+}
+
+.container .check_bottom_left,.container .check_bottom_right{
+  display: inline-block;
+  text-align: center;
+  width:50%
+}
+.container .check_bottom_left .tit,.container .check_bottom_right .tit{
+  font-size: 25rpx;
+  color: #666;
+  margin-top: 10rpx
+}
+.container .kefu_info{
+  text-align: center;
+  margin-top: 24rpx
+}
+.container .kefu_left{
+  margin-right: 100rpx
+}
+.container .kefu_right{
+  margin-left: 20rpx
+}
+.container .kefu_left image,.container .kefu_right image{
+  width:31rpx;
+  height: 31rpx;
+  vertical-align: middle;
+}
+.container .kefu_left label,.container .kefu_right label{
+  font-size: 28rpx;
+  margin-left: 15rpx
+}
+.container .tit_none{
+  font-size: 32rpx;
+  color: #666;
+  padding-top: 42rpx;
+}
+.container .tit_nones{
+  font-size: 26rpx;
+  color: #999
+}
+.bg_f3{
+  background: #f3f3f3;
+  text-align: center
+}
+.bg_f3 image{
+  width: 443rpx;
+  height: 410rpx;
+  margin-top: 87rpx
+}
+/* 客服会话 */
+.kefu_btn{
+  position: relative;
+  left: -100rpx;
+  top: 15rpx;
+  opacity: 0
+}
+
+.saoma{
+  text-align: center;
+  padding-top: 174rpx
+}
+.saoma image{
+  /* display: block */
+}
+.canvas_saoma .bg{
+  width: 429rpx;
+  height: 437rpx
+}
+.canvas_saoma .top{
+  width: 44rpx;
+  height: 90rpx;
+  position: absolute;
+  left: 360rpx;
+  top: 237rpx
+}
+.canvas_saoma .bottom{
+  width: 120rpx;
+  height: 186rpx;
+  position: absolute;
+  left: 320rpx;
+  top: 314rpx
+}
+.saoma .saoma_content{
+  margin-left: 34rpx
+}
+.saoma .saoma_content image{
+  width: 681rpx;
+  height: 99rpx
+}
+.saoma_footer{
+  background: #f3f3f3;
+  margin-top: 221rpx
+}
+.saoma_footer_bottom{
+  color: #ffbe00;
+  font-size: 32rpx;
+  text-align: right;
+  margin-top: 76rpx;
+  margin-right: 43rpx
+}
+.bg_f3f3{
+  background: #f3f3f3
+}
+.baoxiu{
+  color:#00a8ff
+}
+.guzhang{
+  font-size: 26rpx;
+  text-align: left;
+  padding-left: 125rpx;
+  line-height: 56rpx;
+}
+button::after{
+  border: none
+}

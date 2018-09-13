@@ -1,0 +1,74 @@
+/* pages/plotselect/plotselect.wxss */
+.content{
+  background: #fff;
+  margin: 20rpx
+}
+.header{
+  /* border-bottom: 1rpx dotted #ccc; */
+  padding-bottom: 34rpx;
+  text-align: center;
+  width: 94%;
+  margin: 0 auto
+}
+.header .loactionImg{
+  width: 63rpx;
+  height: 88rpx;
+  margin-top: 40rpx
+}
+.header .xq_name{
+  font-size: 36rpx
+}
+.content .xq_list{
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.content .xq_list .list_item{
+  font-size: 32rpx;
+  margin: 33rpx 35rpx;
+}
+
+.weui-search-bar {
+position:relative;
+padding:8px 10px;
+display:-webkit-box;
+display:-webkit-flex;
+display:flex;
+box-sizing:border-box;
+background-color:#fff;
+border-top:none;
+border-bottom:none;
+
+}
+
+.weui-search-bar__form {
+position:relative;
+-webkit-box-flex:1;
+-webkit-flex:auto;
+flex:auto;
+border-radius:5px;
+background:#f3f3f3;
+border:1rpx solid #e6e6ea;
+
+}
+.weui-search-bar__label {
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0;
+z-index:2;
+border-radius:3px;
+text-align:center;
+color:#9b9b9b;
+background:#f3f3f3;
+line-height:28px;
+
+}
+.city_name{
+  font-size: 34rpx;
+  margin: 20rpx auto
+}
+.sanjiao{
+  width: 18rpx;
+  height: 11rpx;
+}
+  

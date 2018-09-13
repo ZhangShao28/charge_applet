@@ -1,0 +1,317 @@
+/**index.wxss**/
+@import '../switch/switch.wxss';
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+  width:70rpx !important;
+  height:42rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:68rpx !important;
+  height: 40rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 38rpx !important;
+  height: 38rpx !important;
+}
+/*swtich样式end*/
+page{
+  border-top: none
+}
+.border{
+  display: inline-block;
+  border-right: 1px solid #e5e5e5;
+  height:100rpx;
+}
+.con-list navigator{
+  display:inline;
+}
+
+.container .header,.containers .header{
+  padding-right: 30rpx;
+  /* padding-top: 20rpx; */
+  font-size: 30rpx;
+  position: relative;
+  z-index: 1;
+}
+.container .xiaoqu-name,.containers .xiaoqu-name{
+  text-align: center;
+  clear: both;
+  padding-top: 40rpx;
+  padding-left: 80rpx;
+  font-size: 40rpx;
+  color: #333;
+}
+.rule{
+  color: #fff;
+  float: right;
+}
+.m-left-5{
+  margin-left:5rpx; 
+}
+
+.container .bgimage{
+  width: 750rpx;
+  height: 360rpx;
+  position: absolute;
+}
+.container .xiaoqu-name .jt,.containers .xiaoqu-name .jt{
+  width: 26rpx;
+  height: 15rpx;
+  vertical-align: middle
+}
+.content{
+    margin: 120rpx 20rpx 20rpx 20rpx;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 220rpx
+}
+.content .con-list{
+  background: #fff;
+  box-shadow: 0px 1px 3px #d9d9d9;
+  border-radius: 4px;
+  margin-bottom: 20rpx;
+  width: 711rpx;
+  min-height: 272rpx
+}
+.content .con-list .con-list-head image{
+  vertical-align: middle;
+  margin-right: 10rpx
+}
+.content .con-list .con-list-head{
+  padding: 18rpx 20rpx 18rpx 34rpx;
+  border-bottom: 1px dotted #d9d9d9;
+  font-size: 38rpx;
+}
+
+.content .con-list .con-list-head .jt{
+  width: 15rpx;
+  height: 26rpx;
+  float: right;
+  margin-top: 17rpx;
+}
+.content .con-list .con-list-head .loca{
+  width: 34rpx;
+  height: 48rpx;
+}
+.content .con-list .con-list-left,.content .con-list .con-list-right{
+  width:49%;
+  display: inline-block;
+  text-align: center;
+  padding: 40rpx 0;
+}
+.content .con-list .con-list-left .num,.content .con-list .con-list-right .num{
+  font-size: 50rpx;
+}
+.content .con-list .con-list-left .tit,.content .con-list .con-list-right .tit{
+  font-size: 26rpx;
+}
+.content .con-list .con-list-left .use,.content .con-list .con-list-right .use{
+  font-size: 28rpx;
+  display:block;
+  color: #666;
+}
+.content .con-list .con-list-left .use .imgsize,.content .con-list .con-list-right .use .imgsize{
+  vertical-align: middle
+}
+.content .con-list .con-list-left .imgsize,.content .con-list .con-list-right .imgsize{
+  width:19rpx;height:28rpx
+}
+.content .con-list .con-list-bottom{
+  font-size: 30rpx;
+  float: right;
+  margin:0 30rpx 10rpx 0; 
+}
+.content .con-list .con-list-bottom .num{
+  height: 41rpx;
+  line-height: 41rpx;
+}
+.content .con-list .con-list-bottom .tit{
+  position: relative;
+  top: 2rpx;
+  margin-right: 10rpx;
+  color: #666;
+}
+.bottoms{
+  text-align: center;
+  margin-top: 36rpx;
+  height: 200rpx;
+  width: 100%;
+  /* margin-bottom: 20rpx; */
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+  border-top: 1rpx solid #e5e5e5
+}
+.scanBtn{
+  width:400rpx;
+  height:110rpx;
+  line-height: 110rpx;
+  border-radius: 55rpx;
+  display: inline-block;
+  position: relative;
+  left: 41rpx;
+  top:50rpx; 
+}
+.scanBtn image{
+  width:68rpx;
+  height:58rpx;
+  vertical-align: middle;
+  margin-top: -8rpx;
+  margin-right: 10rpx
+}
+.bottoms .myInfo{
+  /* display: inline-block; */
+  width:114rpx;
+  height:114rpx;
+  position: relative;
+  float: right;
+  right:40rpx;
+  top:54rpx 
+
+}
+.bottoms .myInfo .myicon{
+  width:114rpx;
+  height:114rpx; 
+
+  }
+.bottoms .myInfo .dot{
+  width:26rpx;
+  height:26rpx; 
+  position: absolute;
+  right:-5rpx;
+  top:-5rpx;
+
+}
+/*附近没有充电设备*/
+.containers{
+  height:100%;
+  color:#333;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  box-sizing:border-box;
+}
+.containers .no_electry{
+  width: 67rpx;
+  height: 118rpx
+}
+.containers .no_tit{
+  color: #999;
+  font-size: 32rpx
+}
+.containers .no_src{
+  width: 681rpx;
+  height: 99rpx
+}
+.containers .no_top{
+  margin:240rpx auto 41rpx auto;
+}
+.containers .no_bottom{
+  margin:558rpx auto auto;
+}
+button{
+  width: 200rpx;
+  height: 50rpx
+}
+.charge_ing{
+  font-size: 28rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background:#fff;
+  box-shadow:0px 1px 3px #d9d9d9;
+  border-radius:4px;
+  margin-bottom: 10rpx;
+  padding-left: 34rpx
+}
+.charge_ing .charge_ing_img{
+  height: 34rpx;
+  width: 34rpx;
+  vertical-align: middle;
+  margin-top: -4rpx;
+  margin-right: 4rpx
+}
+.charge_ing .charge_ing_jt{
+  height: 26rpx;
+  width: 14rpx;
+  float:right;
+  margin-top:32rpx;
+  margin-right: 30rpx
+}
+form{
+  width: 400rpx;
+  height: 110rpx;
+  line-height: 110rpx
+}
+.new_active{
+  position: absolute;
+  left: 30rpx;
+  font-size: 30rpx;
+  color: #fff
+}
+/* 小问号 */
+@font-face {
+  font-family: 'iconfont';  /* project id 657757 */
+  src: url('//at.alicdn.com/t/font_657757_q4y31b4yehkqehfr.eot');
+  src: url('//at.alicdn.com/t/font_657757_q4y31b4yehkqehfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_657757_q4y31b4yehkqehfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_657757_q4y31b4yehkqehfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_657757_q4y31b4yehkqehfr.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-help:before { content: "\e6a3"; }
+
+.icon-icon-question:before { content: "\e66b"; }
+
+.icon-wenhao:before { content: "\e61f"; }
+/* 模拟授权弹框 */
+.mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 199103
+}
+.author_view{
+  position: fixed;
+  z-index: 199104;
+  width: 600rpx;
+  height: 300rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  margin: 0;
+  left: 75rpx;
+  top: 300rpx;
+}
+.author_view .author_tit{
+  text-align: center;
+  margin-top: 40rpx;
+  font-size: 18px;
+}
+.author_view .author_txt{
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 30rpx
+}
+.author_view button{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 18px;
+  color: #fff;
+  background: #ffbe00;
+  margin-top: 22rpx
+}

@@ -1,0 +1,187 @@
+/* pages/myinfo/myinfo.wxss */
+page{
+  border-top: none
+}
+.container{
+    background: #fff
+}
+.container .header .nav_bg{
+  width: 100%;
+  height: 390rpx;
+  position: absolute;
+}
+
+.container .header{
+
+  position: relative;
+  z-index: 1;
+}
+ .content{
+   box-shadow: 0rpx 0rpx 2px 0rpx #e5e5e5;
+  width: 711rpx;
+  background: #fff;
+  margin: 52rpx auto 0 auto ;
+    position: relative;  
+  /* top: -52rpx; */
+  border-radius: 4rpx;
+  z-index: 1;
+  /* padding-bottom: 370rpx;     */
+   /* margin-bottom: 370rpx ;     */
+ 
+}
+.container .header .touxiang_info{
+  text-align: center;
+  position: relative;
+  z-index: 11;
+  padding-top: 40rpx
+}
+.container .header .touxiang_info .tx_img{
+  width: 171rpx;
+  height: 171rpx;
+  border-radius: 171rpx;
+  margin: 0 auto;
+  overflow: hidden
+}
+.container .header .touxiang_info .tx_img image{
+  width: 171rpx;
+  height: 171rpx;
+}
+.container .header .touxiang_info .modifity{
+  width: 35rpx;
+  height: 35rpx
+}
+.container .header .touxiang_info .phone{
+  font-size: 30rpx;
+  color: #fff;
+  padding-top: 10rpx
+}
+
+.container .content .my_wallet{
+  padding-left:23rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 38rpx
+}
+.container .content .wallet_img{
+  width: 47rpx;
+  height: 39rpx;
+  vertical-align: middle;
+  margin-top: -5rpx
+}
+.container .content .my_list:first-child{
+   border-top: 0rpx solid #e5e5e5
+}
+.container .content .my_list{
+  padding-left:23rpx;
+  /* height: 174rpx; */
+   border-top: 1rpx solid #e5e5e5 
+}
+
+.container .content .my_list.my_list_none{
+   border-top: none;
+}
+.container .content .list_left,.container .content .list_right{
+  display: inline-block
+}
+.container .content .list_left{
+  margin-top: 23rpx
+}
+.container .content .list_right{
+  float: right;
+  margin-top: 76rpx;
+  margin-right: 23rpx
+}
+.container .content .list_right .go_recharge{
+  width: 140rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  background: #ffbe00;
+  border-radius: 4rpx;
+  font-size: 32rpx;
+  color: #fff
+}
+.container .content .list_left .xq_name{
+  font-size: 36rpx
+}
+.container .content .list_left .day_num{
+  font-size: 30rpx;
+  color: #666
+}
+.container .content .list_left .day_num .num{
+  font-size: 48rpx;
+  color: #ffbe00
+}
+.container .content .list_right image{
+  width: 141rpx;
+  height: 59rpx
+}
+.container .footer{
+  /* height: 357rpx; */
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  /* border-top: 1rpx solid #e5e5e5; */
+  z-index: 11
+}
+.container .footers{
+   height: 240rpx;
+   line-height: 350rpx;
+   opacity: 0
+}
+.weui-cell__bd{
+  font-size: 32rpx
+}
+.weui-cell{
+  height: 80rpx
+}
+.weui-cell::before{
+  border-top:1rpx solid #e5e5e5;
+}
+.weui-cell__ft{
+  color: #08C1F7;
+  font-size: 30rpx
+}
+.weui-cells:after {
+  margin-left: 30rpx
+}
+.wallet_detail{
+  font-size: 34rpx;
+  color: #ffbe00;
+  margin-left: 20rpx
+}
+.new_msg{
+  background: #f8f8f8;
+  font-size: 26rpx;
+  color: #ffbe00;
+  padding: 10rpx 30rpx;
+  margin-left: -23rpx
+}
+.weui-cell.footer_bottom{
+  border-bottom: 1rpx solid #e5e5e5
+}
+.send_text{
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  color: #666;
+  position: relative;
+  top: -20rpx
+}
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+  width:90rpx !important;
+  height:50rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:86rpx !important;
+  height: 46rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 46rpx !important;
+  height: 46rpx !important;
+}
+/*swtich样式end*/

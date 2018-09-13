@@ -1,0 +1,14 @@
+<!--pages/rule/rule.wxml-->
+<view class='container'>
+    <view class='rule_content'>
+          <view class='rule_tit'>小码充电月卡规则</view>
+          <view class='rule_small_tit'>1. 充电说明</view>
+          <view class='rule_con'>该月卡只在本小区使用。月卡生效期间，一天可使用{{num}}次充电服务，充满自动断电，未充满拔下充电器计为1次充电;</view>
+          <view class='rule_small_tit'>2. 故障补偿</view>
+           <view class='rule_con'>用户使用期间，若出现设备故障，故障报修审核成功后补偿1天的充电服务;</view>
+          <view class='rule_small_tit'>3. 生效与续费</view>
+           <view class='rule_con'>当前若无月卡，购买后月卡立即生效；当前若已有月卡，续费后有效期顺延（1个月按照30天计算）;</view>
+          <view class='rule_small_tit'>4. 其他</view>
+           <view class='rule_con'>购卡成功后，相应费用不予退还。</view>
+    </view>
+</view>

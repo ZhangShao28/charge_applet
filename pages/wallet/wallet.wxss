@@ -1,0 +1,77 @@
+/* pages/wallet/wallet.wxss */
+.container{
+  padding: 20rpx
+}
+.xian{
+  border-top: 1rpx solid #e5e5e5;
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  top: -24rpx;
+}
+.header{
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2rpx 3rpx #e5e5e5
+}
+.header .tit{
+  width: 130rpx;
+  margin: 100rpx auto 0 auto;
+  font-size: 24rpx;
+  background: #fff;
+  position: relative;
+  z-index: 1
+}
+.header .tit label{
+  font-size: 28rpx;
+}
+.header .money{
+  font-size: 88rpx;
+  color: #FFA800;
+  margin-top: 20rpx;
+  margin-bottom: 80rpx
+}
+.header .money .yuan{
+  font-size: 30rpx;
+  color: #FFA800;
+}
+.content{
+  background: #fff;
+  margin-top: 20rpx;
+  box-shadow: 0 2rpx 3rpx #e5e5e5;
+  margin-bottom: 20rpx;
+}
+.content .list_top{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 30rpx;
+  font-size: 36rpx;
+}
+.content .list_top image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 8rpx;
+  margin-top: -6rpx
+}
+.content .list_con{
+  font-size: 32rpx;
+  padding: 30rpx;
+  border-top: 1rpx solid #e5e5e5
+}
+.content .list_con .time{
+  margin-bottom: 20rpx
+}
+.content .list_con .money-total{
+  display: inline-block
+}
+.content .list_con .money_num{
+  color: #FFA800;
+  display: inline-block
+}
+.content .list_con .money_num label{
+  font-size: 28rpx;
+}
+.content .list_con .money_tit{
+  float: right
+}

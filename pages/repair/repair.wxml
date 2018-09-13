@@ -1,0 +1,54 @@
+<!--pages/repair/repair.wxml-->
+<view class='container'>
+    <view class='content'>
+     <view class="page__bd page__bd_spacing">
+            <view class="kind-list">
+                <block wx:for="{{list}}" wx:key="id">
+                    <view class="kind-list__item">
+                        <view id="{{item.id}}" class=" kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+                            <view class="weui-flex__item">{{item.name}}</view>
+                        </view>
+                        <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}"> 
+                            <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}"> 
+                                
+                                <view class='electrocar' wx:if='{{item.type_state==0}}'>
+                                  <block wx:for='{{electrocar}}'>
+                                  <label class="list_box {{item.flag ? 'list_box_select' :''}}" data-id='{{index}}' bindtap='select_electrocar'>{{item.tit}}</label>
+                                  </block>
+                                </view> 
+                                <view class='charging' wx:if='{{item.type_state==1}}'>
+                                  <view wx:for='{{charging}}'>
+                                  <label class="list_box {{item.flag ? 'list_box_select' :''}}" data-id='{{index}}' bindtap='select_charging' >{{item.tit}}</label> 
+                                  </view>
+                                </view> 
+                                  <view class='hardware' wx:if='{{item.type_state==2}}'>
+                                    <image src='../../images/repair/charging.png'></image>
+                                    <label class='b0'>001</label>
+                                    <block wx:for='{{hardware}}'>
+                                      <label class="list_box {{item.clas}} {{item.flag ? 'list_box_select' :''}}"  data-id='{{index}}' bindtap='select_hardware'>{{item.tit}}</label>
+                                    </block>
+                                </view>   
+                             
+                                  <view class='other' wx:if='{{item.type_state==3}}'>
+                                
+                                    <textarea bindinput='change_input'  auto-focus='{{item.type_state==3? "true":"false"}}' fixed="true"  placeholder="请输入故障原因" placeholder-style="font-size:30rpx;" cursor-spacing="40"/>            
+                                </view>  
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>  
+    </view> 
+    <view class='footer'>
+        <view class='submit_btn btn' bindtap='submit_btn'>提交</view>
+        <view class='tit'>（请保持手机畅通，24小时内将有客服人员联系您）</view>
+        <view class='kefu_info'>
+          <label class='kefu_left' bindtap='go_property_kefu'> 
+          <image src='../../images/electricize/telephone@3x.png'></image><label>物业电话</label></label>
+           <label class='kefu_right' bindtap='go_our_kefu' wx:if='{{is_no==1}}'> 
+          <image src='../../images/electricize/Customer-service@3x.png'></image><label>平台客服</label></label> 
+          <!-- <contact-button class='kefu_btn'  type="default-dark" size="27" session-from="weapp"></contact-button> -->
+        </view>
+    </view>
+</view>

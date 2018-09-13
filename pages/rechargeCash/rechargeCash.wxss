@@ -1,0 +1,456 @@
+/* pages/recharge/recharge.wxss */
+.header{
+  height: 270rpx;
+  background: #fff;
+  border-top: 1rpx solid ccc;
+  text-align: center
+}
+.header .balance,.header_state .balance{
+  font-size: 28rpx;
+  margin: 73rpx 40rpx;
+  color: #666;
+}
+.header .header_top{
+  margin-top: 40rpx;
+  margin-bottom: 20rpx
+}
+.header .balance .yuan{
+  font-size: 24rpx
+}
+.xt{
+  border-top: 1rpx solid #e5e5e5;
+  width: 132rpx;
+  display: inline-block;
+  position: relative;
+  top: -8rpx
+}
+.header .money{
+  font-size: 88rpx;
+  color: #ffbe00;
+}
+
+
+.content{
+  background: #fff;
+  padding: 29rpx 36rpx;
+}
+.header{
+  padding-bottom: 81rpx
+}
+/* .hx{
+   border-top: 1rpx solid #e5e5e5; 
+  width: 90%;
+  margin: 0 auto;
+} */
+.content .num_list{
+  width: 290rpx;
+  height: 152rpx;
+  /* line-height: 152rpx; */
+  border: 1rpx solid #e5e5e5;
+  border-radius: 4rpx;
+  display: inline-block;
+  margin-top: 29rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 30rpx
+
+}
+.content .num_list .num_txt{
+  font-size: 32rpx;
+  font-weight: 400
+}
+.content .num_list .num_color{
+  font-size: 60rpx;
+  font-weight: 600
+}
+.content .lists{
+  display: inline-block;
+  border-radius: 4rpx;
+ 
+}
+ .content .lists:nth-child(2n+1){
+  margin-left: 24rpx;
+  
+}
+.content .num_list .small_txt{
+  font-size: 22rpx;
+  display: block;
+  margin-top:-10rpx;
+}
+.content .num_list .yuan{
+  font-size: 28rpx;
+}
+.contents .small_txt{
+  font-size: 24rpx;
+  display: block;
+  margin-top: 15rpx
+}
+.contents .num_color{
+  font-size: 48rpx
+}
+.contents .num_colors{
+  font-size: 48rpx;
+}
+.contents .num_colors label{
+  font-size: 36rpx
+}
+/*.content .num_list:nth-child(3n-3){
+  margin-left: 19rpx;
+  margin-right: 19rpx
+} */
+.content .tit{
+  font-size: 50rpx;
+  margin-top: 30rpx;
+  color: #333;
+  font-weight: 600
+}
+.content .use_day{
+  font-size: 32rpx;
+  float: right;
+ font-weight: 400
+}
+.content .use_day .use_day_num{
+  font-size: 50rpx
+}
+.content .select_item{
+   position: relative;
+   border: 3rpx solid #ffbe00;
+   background-repeat: no-repeat;
+   background-size: cover
+}
+
+.content .select_src{
+  width: 63rpx;
+  height: 57rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+
+.footer{
+  text-align: center;
+  padding-bottom: 30rpx;
+  padding-top: 0rpx;
+  background: #fff;
+}
+.recharge_div{
+  /* height: 180rpx; */
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 10rpx 14rpx 16rpx #ccc;
+  border-top: 1px solid #e5e5e5
+}
+.recharge_btn{
+  text-align: center;
+  width: 640rpx;
+  margin: 30rpx auto 30rpx auto;
+}
+
+
+
+.recharge_btn.btn2{
+  float: right;
+  text-align: center;
+  width: 160rpx;
+  border-radius: 0;
+  margin: 30rpx 40rpx 30rpx auto;
+  height:80rpx;
+  line-height:80rpx;
+}
+.my_money{
+  display: inline-block;
+  margin:60rpx 40rpx 0rpx 40rpx;
+}
+.my_money .my_money_tit{
+  font-size: 32rpx;
+  color: #666;
+}
+.footer .footer_tit{
+  text-align: left;
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 65rpx;
+  margin-right: 60rpx; 
+  line-height: 48rpx;
+}
+.footer .footer_tit .dot{
+  width: 11rpx;
+  height: 11rpx;
+  margin-left: -15rpx
+}
+.contents{
+  background: #fff;
+  height: 100%;
+  padding: 30rpx 36rpx 100rpx 36rpx;
+  /* border-top: 1rpx solid #e5e5e5;  */
+}
+.headers{
+  padding-bottom: 81rpx;
+  margin-bottom: 30rpx;
+}
+
+.contents .num_list{
+  position: relative;
+  width: 200rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 2rpx;
+  display: inline-block;
+  margin-top: 29rpx;
+  text-align: center;
+  font-size: 36rpx
+}
+.contents .lists{
+  display: inline-block
+}
+.contents .list_box{
+  display: inline-block;
+  margin-top: 10rpx
+}
+.contents .lists:nth-child(3n+2){
+  margin-left: 30rpx;
+  margin-right: 30rpx
+}
+/* .contents .lists:nth-child(2n){
+  margin-left: 26rpx;
+} */
+/* .contents .item_list:nth-child(2n){
+  margin-left: 0rpx;
+}
+.contents .item_list:nth-child(2n+1){
+  margin-left: 26rpx; 
+} */
+.contents .tit{
+  font-size: 34rpx;
+  color: #666
+}
+.contents .select_item{ 
+   position: relative;
+   /* border: 1px solid #ffbe00; */
+   border-color: #ffbe00;
+   top: 0rpx;
+}
+.contents .select_src{
+  width: 42rpx;
+  height: 38rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+.footers{
+  background: #fff;
+  /* padding-bottom: 30rpx; */
+  position: fixed;
+  width: 100%;
+  bottom: 0rpx;
+  box-shadow:0rpx  1rpx 8rpx #e5e5e5;
+
+}
+.footers .recharge{
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #666
+}
+.footers .recharge.btn1{
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  color: #666
+}
+.footers .recharge label{
+  color: #ffbe00
+}
+
+.select_box{
+  background: #fff;
+  position: fixed;
+  z-index: 999999;
+  /* height: 500rpx;   */
+  width: 100%;
+  /* bottom: -500rpx */
+   bottom: -500rpx; 
+}
+.select_box .new_user{
+  color: #FFBE00;
+  font-size: 34rpx;
+  padding:0rpx 30rpx 0rpx 30rpx;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #e5e5e5
+}
+.select_box .new_user image{
+  width: 22rpx;
+  height: 33rpx;
+  float: right;
+  margin-top: 44rpx;
+  margin-right:30rpx;
+
+}
+.payment_box{
+  font-size: 34rpx;
+  padding: 0rpx 30rpx 0rpx 30rpx;
+   line-height: 120rpx;
+}
+.payment_box .payment_list{
+  border-bottom: 1rpx solid #e5e5e5
+}
+.payment_box .select_img{
+  width: 51rpx;
+  height: 51rpx;
+  float: right;
+  margin-top: 35rpx;
+  margin-right: 20rpx
+} 
+.payment_box .pay_img{
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+  margin-top: -8rpx
+}
+.no_use{
+  opacity: .5;
+}
+.num_day{
+  color: #ffbe00
+}
+.show_pay_box{
+   animation: pay_box 0.3s linear 1 forwards; 
+}
+
+@keyframes pay_box {
+ 0% {
+ bottom: -500rpx;
+ }
+ 
+ 100% {
+ bottom: 0rpx;
+ }
+}
+ .card_img{
+  margin-top: 40rpx;
+  text-align: center;
+  position: relative;
+}
+.card_img image{
+  width:686rpx;
+  height: 421rpx;
+}
+.card_img .card_img_xqname{
+  position: absolute;
+  top:56rpx;
+  left:46rpx;
+  font-size:40rpx;
+  color: #333
+}
+.card_img .card_img_txt{
+  position: absolute;
+  z-index: 0;
+  bottom: 70rpx;
+  left: 36rpx;
+  font-size: 32rpx;
+  width: 90%
+}
+.card_img .card_img_txt .float_r label{
+    font-size: 28rpx;
+}
+
+
+
+.header_state .header_content{
+  background: #fff;
+  margin-bottom: 30rpx;
+  text-align: center;
+  padding:40rpx 36rpx;
+}
+.header_state .header_content .xt{
+  width: 80rpx
+}
+.header_state .rule_list{
+ padding: 40rpx 30rpx 30rpx 30rpx;
+}
+.header_state .rule_txt{
+  width: 90%;
+  font-size: 26rpx;
+  text-align: left;
+  color: #888;
+  margin: 0rpx auto;
+  line-height: 42rpx;
+}
+.header_state .rule_txt image{
+  width: 13rpx;
+  height: 13rpx;
+  position: relative;
+  top: -4rpx;
+  margin-right: 10rpx
+}
+.header_state .rule_list .rule_item{
+  width: 33%;
+  display: inline-block;
+  font-size: 24rpx
+}
+.header_state .rule_list .rule_item .rule_num{
+  font-size: 48rpx;
+}
+.header_state .rule_list .rule_item .rule_time{
+  font-size: 26rpx;
+  color: #999
+}
+.my_u_money{
+  background: #fff;
+  font-size: 34rpx;
+  padding:10rpx 36rpx 0rpx 36rpx;
+  height: 100rpx;
+  line-height: 89rpx;
+  color: #666;
+  border-bottom: 1rpx solid #e5e5e5
+}
+.my_u_money .u_right{
+  float: right;
+   color: #333; 
+}
+.my_u_money .u_num{
+  font-size: 40rpx;
+}
+.my_u_money .u_yuan{
+  font-size: 24rpx;
+}
+.newuser_tit{
+  font-size: 26rpx;
+  color: #999;
+  padding-top:10rpx;
+  padding-left:60rpx;
+}
+.newuser_tit .expiry_time{
+  font-size: 24rpx;
+}
+.money_icon{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  top: 10rpx;
+  margin-right: 10rpx
+}
+.give_txt{
+  font-size:24rpx;
+  height:28rpx;
+  line-height:28rpx;
+  padding:5rpx 16rpx;
+  background:#FFBE00;
+  border-radius:20px 0px 0px 20px;
+  position:absolute;
+  right:0rpx;
+  top:4rpx;
+}
+.pad_top14{
+  position: relative;
+  top: 16rpx;
+  display: inline-block
+}
+.dis_inline{
+  display: inline
+}

@@ -1,0 +1,2 @@
+<!--pages/chargeRule/chargeRule.wxml-->
+<web-view src='https://www.ixmcd.com/wechat/rule.html'></web-view>

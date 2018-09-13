@@ -1,0 +1,57 @@
+/* pages/account/account.wxss */
+.container{
+  background: #fff;
+  text-align: center
+}
+.container .xt{
+   border-top: 1rpx solid #e5e5e5;
+  width: 152rpx;
+  display: inline-block;
+  position: relative;
+  top: -8rpx
+}
+.container .end_img{
+  width: 476rpx;
+  height: 484rpx;
+  margin: 65rpx auto 51rpx auto
+}
+.container .num_tit .tit{
+  font-size: 26rpx;
+  color: #666;
+  margin: 0 60rpx
+}
+.container .num{
+  font-size: 96rpx;
+}
+.container .num label{
+  font-size: 30rpx;
+}
+.container .time{
+  font-size: 28rpx;
+  color: #666;
+  width: 551rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin: 20rpx auto
+}
+.container .time .time_tit,.container .time .time_num{
+  font-size: 28rpx;
+  width: 50%;
+  display: inline-block
+}
+.container .time .time_tit{
+  text-align: left;
+   color: #666;
+}
+.container .time .time_num{
+  text-align: right;
+  color: #333
+}
+.container .time .time_num label{
+  font-size: 36rpx
+}
+.container .go_recharge{
+  width: 601rpx;
+  height: 99rpx;
+  margin: 60rpx auto 0 auto
+}

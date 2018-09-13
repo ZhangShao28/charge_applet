@@ -1,0 +1,2 @@
+<!--pages/protocol/protocol.wxml-->
+<web-view src='https://www.ixmcd.com/wechat/user-rule.html'></web-view>

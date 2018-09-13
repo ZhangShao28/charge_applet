@@ -1,0 +1,64 @@
+<!--pages/recharge/recharge.wxml-->
+<view class='container'>
+  <view class='header headers' wx:if='{{is_no_xqid==1}}'><!--不带小区id的充值-->
+    <view class='header_top'>
+    <label class='xt'></label><label class='balance'>余额 <label class='yuan'>(元)</label></label><label class='xt'></label>
+    </view>
+    <view class='money'>
+      {{money}}
+    </view>
+  </view>
+  <view class='header_state' wx:if='{{is_no_xqid==2}}'>   <!--带小区id的充值-->
+      <view class='header_content'>
+          <label class='xt'></label><label class='balance'>{{xq_city}}·{{xq_name}}收费标准</label><label class='xt'></label>
+          <view class='rule_list'>
+              <view class='rule_item' wx:for='{{recharge_rule}}'><label class='rule_num'>{{item.card_money}}</label>元 <view class='rule_time'>{{item.card_type}}</view></view>
+          </view>
+          <view class='rule_txt'>
+          <view><image src='../../images/recharge/dot.png'></image>充电结束后，按照充电时长自动扣费。</view>
+          <view><image src='../../images/recharge/dot.png'></image>请保证余额中大于{{recharge_maxrule}}元。</view>
+          <view><image src='../../images/recharge/dot.png'></image>什么时候会结束充电 </view>
+              <view><text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;1. 充电器被拔下</text></view>
+              <view><text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;2. 电池已充满，小码会主动关闭订单</text></view>
+          </view>
+      </view>
+      <!-- <view class='my_u_money'>
+        <image class='money_icon' src='../../images/recharge/balance@2x.png'></image>我的余额 
+        <view class='u_right'>
+          <label class='u_num'>{{money}}</label><label class='u_yuan'>元</label>
+        </view>
+      </view> -->
+  </view>
+ 
+  <view class='contents'>
+    <view class='tit'><image class='money_icon' src='../../images/recharge/recharge@2x.png'></image>充值金额</view>
+     <view class='newuser_tit' wx:if='{{give_is_no==1}}'>{{extra_title}} <label class='expiry_time'>( 活动截止时间：{{expiry_time}} )</label></view>
+       <view class='list_box'> 
+      <block wx:for='{{num_moneylist}}'>
+        <view class='lists {{give_is_no==1?"":"item_list"}}'  bindtap='select_recharge' data-id='{{index}}' data-cid='{{item.id}}' data-pay_money='{{item.money}}'>
+        <view class='num_list select_item' wx:if='{{recharge_id == index}}'>
+          <!-- <view class='num_list select_item' wx:if='{{recharge_id == index}}' style='{{select_item_background}}'> -->
+          <image class='select_src' src='../../images/recharge/Select-the-box@3x.png'></image>
+            <label class='give_txt' wx:if='{{give_is_no==1&&item.give!=0}}'>赠{{item.give}}元</label>
+            <label class='num_colors {{give_is_no==1&&item.give!=0?"pad_top14":"dis_inline"}}'><label>￥</label>{{item.money}}</label>
+          </view> 
+          <view class='num_list' wx:else>
+           <!-- <label class='give_txt' style='{{give_is_no==1?"background:#FFBE00":""}}' wx:if='{{give_is_no==1&&item.give!=0}}'>赠{{item.give}}元</label> -->
+             <label class='give_txt' wx:if='{{give_is_no==1&&item.give!=0}}'>赠{{item.give}}元</label>
+            <label class='num_colors {{give_is_no==1&&item.give!=0?"pad_top14":"dis_inline"}}'><label>￥</label>{{item.money}}</label>
+          </view>
+        </view>
+       </block>
+    </view> 
+  </view>
+    <view class='footers' wx:if='{{is_no_xqid==1}}'>
+      <view class='recharge_btn btn btn1'  bindtap='{{recharge_btn?"recharge_cash_btn":""}}'>充  值</view>
+      <view class='recharge btn1'>充值表示您已阅读，并同意《<label bindtap='go_recharge'>用户充值协议</label>》</view>
+    </view>
+    <view class='footers' wx:if='{{is_no_xqid==2}}'>
+      <view class='my_money'> <label class='my_money_tit'>余额：{{money}}元</label></view>
+      <view class='recharge_btn btn btn2'  bindtap='{{recharge_btn?"recharge_cash_btn":""}}'>充  值</view>
+      <!-- <view class='recharge'>充值表示您已阅读，并同意《<label bindtap='go_recharge'>用户充值协议</label>》</view> -->
+    </view>
+  
+</view>

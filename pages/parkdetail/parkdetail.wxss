@@ -1,0 +1,67 @@
+/* pages/parkdetail/parkdetail.wxss */
+.header{
+   text-align: center;
+   margin-bottom: 40rpx;
+}
+.header .loactionImg{
+  width: 63rpx;
+  height: 88rpx;
+}
+.header .park_name{
+  font-size: 40rpx
+}
+.content{
+  width: 706rpx;
+  margin: 20rpx auto 120rpx auto;
+  /* height: 100%; */
+  background: #fff;
+  border-radius: 6rpx;
+  text-align: center;
+  padding-top: 40rpx;
+}
+.content .select_charge{
+  width: 97rpx;
+  height: 97rpx;
+  display: block;
+  margin: 0 auto;
+}
+.content .charge_list{
+  /* width: 235rpx; */
+  width:33%;
+  height: 230rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  float: left
+}
+.content .charge_list:nth-child(3n-1){
+  border-right: 1rpx solid #e5e5e5;
+}
+.content .charge_list:nth-child(3n){
+  border-right: 1rpx solid #e5e5e5;
+}
+.content .charge_list .num{
+  font-size: 32rpx;
+  margin: 18rpx auto 10rpx auto;
+}
+.content .charge_list .state{
+  font-size: 28rpx;
+  color: #ffbe00;
+}
+.footer{
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1rpx solid #e5e5e5
+}
+.footer .begin_btn{
+  width: 681rpx;
+  height: 99rpx;
+  margin: 30rpx auto 30rpx auto;
+}
+.btn_ccc{
+  background: #ccc
+}
+.zh{
+  opacity: 0
+}

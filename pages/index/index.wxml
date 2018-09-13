@@ -1,0 +1,115 @@
+<!--index.wxml-->
+<import src="../switch/switch.wxml"/>
+<view class='mask' wx:if='{{showmask}}'></view>
+<view class='author_view' wx:if='{{showauthor}}'>
+    <view class='author_tit'>您需要微信授权呦ヾ(•ω•`)o</view>
+    <view class='author_txt'>授权将获取您的微信头像,昵称等信息</view>
+    <button open-type="getUserInfo" bindgetuserinfo="getuserinfo">微信授权</button>
+</view>
+<view class='author_view' wx:if='{{showlocal}}'>
+    <view class='author_tit'>小程序需要您的授权定位</view>
+    <view class='author_txt'>授权定位将获取您的位置信息</view>
+    <button open-type="openSetting" bindgetuserinfo="callback">打开定位设置</button>
+</view>
+<view class='container' wx:if='{{is_no==1}}'>
+   
+   <image class='bgimage' src='{{bgImage}}' mode="{{mode}}"></image> 
+  <view class="header">
+    <label class='new_active'  bindtap='go_new_active' wx:if='{{is_new==1}}'>{{message}}<text class="iconfont icon-icon-question"></text></label>
+    <view class='rule' wx:if='{{rule_state==1}}' bindtap='go_charge'>计费:月卡
+    </view>
+    <view class='rule' wx:if='{{rule_state==2}}'  bindtap='go_charge'>按次收费
+    </view>
+    <view class='xiaoqu-name'>
+    <label  bindtap='changXiaoqu'>{{xqname}}</label>
+      <label class='m-left-5'>
+         <image class='jt' src="{{srcjts}}"></image> 
+      </label>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='charge_ing' wx:if='{{charging_img == 1}}' bindtap='go_chargelog'>
+        <image class='charge_ing_img' src='../../images/charge_ing@2x.png'></image>
+      正在充电中
+      <image class='charge_ing_jt' src='../../images/triangle@2x.png'></image>
+    </view>
+    <view class='con-list' wx:for='{{park_list}}' >
+      <view data-id='{{item.pid}}' data-use='{{item.useful_num}}' bindtap='go_parkdetail'>
+      <view class='con-list-head'>
+        <image class='loca' src='../../images/localize@2x.png'></image>
+        {{item.place_name}}
+        <image class='jt' src="{{srcjt}}"></image> 
+      </view>
+        <view class='con-list-left'>
+            <label class='num'>{{item.useful_num}}</label>
+            <label class='tit'>个</label> 
+            <label class='use'>
+            <image class='imgsize' src='../../images/usable@2x.png'></image>
+            可用</label>
+        </view>   
+      <view class='border'></view>
+      <view class='con-list-right'>
+        <label class='num'>{{item.disable_num}}</label>
+          <label class='tit'>个</label> 
+          <label class='use'>
+          <image class='imgsize' src='../../images/in-use@2x.png'></image>
+          使用中</label>
+      </view> 
+      </view>
+      <view class='con-list-bottom' wx:if='{{item.num==0}}'>
+          <label class='tit'>有空余插座通知我</label> 
+          <label class='num'> 
+               <switch type='' wx:key='*this' checked='{{switchChecked}}' data-pid='{{item.pid}}' bindchange="switchChange"/>  
+               
+                  
+            <!-- <view class='switchBox' bindtap='clickSwitch' data-id='{{index}}' data-sid='{{item.sid}}'> 
+              <image class='btn' src="{{switch_btn.btnsrc}}"></image>
+              <image class='round' animation="{{switch_btn.animationData}}" src="{{switch_btn.roundsrc}}"></image>
+            </view> -->
+          </label>
+      </view> 
+      <view class='clearboth'></view>
+    </view>
+  </view>
+    <view class='bottoms'>
+       <form bindsubmit='Scan_Submit' report-submit='true'>
+            <button  class='scanBtn btn' bindtap='ScanBtn' form-type="submit" hover-class="none">
+                <image src='../../images/Sweepcodeicon@2x.png'></image>{{is_new==1?"新人免费充电":"扫码充电"}}
+            </button>
+      </form>
+       <view class='myInfo'>
+          <image class='myicon' bindtap='go_myinfo' src='../../images/Myicon@2x.png'></image>
+          <!-- <image wx:if='{{charging_img == 1}}' class='dot' src='../../images/dots.png'></image>  -->
+       </view> 
+      </view>
+</view>
+
+<view class='containers' wx:if='{{is_no==2}}'>
+
+  <view class="header">
+      <view class='xiaoqu-name' bindtap='changXiaoqu'>选择小区
+        <label class='m-left-5'>
+          <image class='jt' src="{{srcjts_no}}"></image> 
+        </label>
+      </view>
+  </view>
+  <view class='no_top'>
+    <image class='no_electry' src='{{no_electry}}'></image>
+  </view>
+  <view class='no_tit'>您当前区域附近没有共享充电设备</view>
+  <!-- <view class='no_bottom' bindtap='changXiaoqu'>
+    <image class='no_src' src='{{no_src}}'></image>
+  </view> -->
+    <view class='bottoms'>
+     <form bindsubmit='Scan_Submit' report-submit='true'>
+          <button  class='scanBtn btn' bindtap='ScanBtn' form-type="submit" hover-class="none">
+            <image src='../../images/Sweepcodeicon@2x.png'></image>
+        {{is_new==1?"新人免费充电":"扫码充电"}}
+          </button>
+     </form> 
+            <view class='myInfo'>
+              <image class='myicon' bindtap='go_myinfo' src='../../images/Myicon@2x.png'></image>
+              <!-- <image wx:if='{{charging_img == 1}}' class='dot' src='../../images/dots.png'></image>  -->
+            </view> 
+        </view>
+</view>

@@ -1,0 +1,87 @@
+/* pages/bindinfo/bindinfo.wxss */
+page{
+  /* background: #fff */
+}
+.container{
+    background: #fff 
+}
+.header{
+  background: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.header .logo{
+  width: 405rpx;
+  height: 51rpx;
+  margin-bottom: 40rpx;
+}
+.tit{
+  text-align: center;
+  margin-top: 160rpx;
+  margin-bottom: 100rpx;
+  font-size: 48rpx
+}
+.header .phone{
+  border-bottom: 1rpx solid #e5e5e5;
+  margin: 0 30rpx
+}
+.header .phone .left,.header .phone .right,.header .verify .left,.header .verify .right{
+  display: inline-block;
+  height: 120rpx;
+  line-height: 120rpx
+}
+.header .phone .left,.header .verify .left{
+  width: 136rpx;
+  font-size: 32rpx;
+}
+.header .phone .right input,.header .verify .right input{
+  display: inline-block;
+  overflow: auto;
+  vertical-align: middle;
+}
+.header .phone .right input,.header .verify .right input{
+  font-size: 40rpx;
+}
+.header .phone .right{
+  width:340rpx;
+}
+.header .verify{
+  margin: 0 30rpx
+}
+.header .access_verify{
+  width: 170rpx;
+  /* height: 69rpx;
+  line-height: 69rpx; */
+  font-size: 32rpx;
+  color: #ffbe00;
+  text-align: center;
+  display: inline-block;
+  border-left: 1rpx solid #e5e5e5;
+  padding-left: 20rpx
+}
+
+.footer .button_btn{
+  width: 640rpx;
+  margin: 200rpx auto 0 auto;
+  text-align: center
+}
+
+.footer .protocol{
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #666
+}
+.footer .protocol label{
+  color: #ffbe00
+}
+.new_user{
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  padding-top: 20rpx;
+  color: #666
+}
+.new_user .num{
+  color: #ff5a61;
+  font-size: 32rpx
+}

@@ -1,0 +1,78 @@
+/**app.wxss**/
+@import 'weui.wxss';
+.container {
+  height: 100%;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  font-family: PingFanSC-Medium;
+}
+.clearboth{
+  clear: both;
+}
+.float_r{
+  float: right
+}
+.float_l{
+  float: left
+}
+.btn{
+  background: #ffbe00;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  border-radius: 49rpx;
+  font-size: 36rpx
+}
+page{
+  height: 100%; 
+  background: #f3f3f3;
+  border-top: 1rpx solid #e5e5e5
+}
+button::after{
+  border: none
+}
+/* 规则说明样式 */
+.rule_tit{
+  font-size: 40rpx;
+  text-align: center;
+  margin: 60rpx auto;
+  font-weight: 400;
+  color: #222
+}
+.rule_content{
+  line-height: 68rpx;
+  padding: 0 40rpx;
+  font-size: 30rpx;
+}
+.rule_small_tit{
+    font-size: 32rpx;
+    color: #333
+}
+.rule_con{
+  padding: 0 0 0 32rpx;
+  line-height: 50rpx;
+  margin-bottom: 32rpx;
+  color: #444;
+}
+.loading{
+  text-align: center;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.wx-radio-input{background: #ccc}
+.mask{
+  background: #000;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0
+}

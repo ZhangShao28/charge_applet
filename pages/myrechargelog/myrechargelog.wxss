@@ -1,0 +1,196 @@
+/* pages/wallet/wallet.wxss */
+.container .head{
+  height: 230rpx;
+  background: #fff;
+  padding: 0 30rpx
+}
+.container .head .head_tit{
+  font-size: 60rpx;
+  color: #333;
+  margin: 34rpx auto
+}
+.container .head .charge_total{
+  font-size: 32rpx;
+  width: 135rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 9rpx solid #ffbe00
+}
+.container .charge_total_num{
+  height: 170rpx;
+  padding: 30rpx 30rpx;
+  background: #fff;
+   border-top: 1rpx solid #e5e5e5;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.container .charge_total_num .time{
+  float: left;
+  text-align: center;
+}
+.container .charge_total_num .time:first-child{
+  margin-right: 30rpx
+}
+.container .charge_total_num .time .time_num{
+  font-size: 48rpx;
+  color: #ffbe00
+}
+.container .charge_total_num .time .time_txt{
+  font-size: 24rpx;
+}
+
+.sanjiao{
+  width: 14rpx;
+  height: 26rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+   transform:rotate(90deg);
+  -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+}
+.sanjiao_open{
+  width: 14rpx;
+  height: 26rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+  transform:rotate(-90deg);
+  -webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+}
+.charge_time{
+  font-size: 32rpx;
+}
+.charge_ing{
+  color: #08C1F7;
+  font-size: 30rpx;
+  float: right;
+  margin-top: 8rpx
+}
+.charge_end{
+  color: #999;
+  font-size: 30rpx;
+  float: right;
+  margin-top: 8rpx
+}
+.dot{
+  width: 17rpx;
+  height: 17rpx;
+  vertical-align: middle;
+  margin-right: 20rpx
+}
+.charge_id{
+  color: #666;
+  font-size: 26rpx;
+  margin-left: 34rpx
+}
+.charge_id .id_txt{
+  margin: 0 30rpx 0 10rpx;
+
+}
+.charge_con{
+  background: #f8f8f8;
+  height: 160rpx;
+  padding: 10rpx 40rpx;
+}
+.charge_con .charge_con_time .time_num{
+  color: #ffbe00;
+  font-size:42rpx; 
+}
+.charge_con .charge_con_time .time_txt{
+  color: #666;
+  font-size:24rpx; 
+}
+.charge_con .charge_con_time,.charge_con .charge_con_xqname{
+    float: left;
+    width:50%;
+    text-align: center;
+    line-height: 50rpx;
+    padding-top: 30rpx
+}
+.charge_con .charge_con_xqname{
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+}
+.charge_con .charge_con_xqname .loc{
+ height: 110rpx;
+ line-height: 110rpx;
+ margin-right: 20rpx;
+ border-left: 1rpx solid #e5e5e5;
+  padding-left: 60rpx 
+}
+.charge_con .charge_con_xqname .loc image{
+  width: 43rpx;
+  height: 59rpx;
+  vertical-align: middle
+}
+.charge_con .charge_con_xqname .loc,.charge_con .charge_con_xqname .xq_name{
+  float: left;
+
+}
+.charge_con .charge_con_xqname .xq_name{
+  line-height: 40rpx;
+  margin-top: 16rpx
+}
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.weui-cells:after, .weui-cells:before {
+  display: none;
+}
+
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.weui-cell:before {
+  right: 15px;
+}
+
+.kind-list__item {
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.kind-list__item:first-child {
+  margin-top: 0;
+}
+
+.kind-list__img {
+  width: 30px;
+  height: 30px;
+}
+
+.kind-list__item-hd {
+  padding: 55rpx 20px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.kind-list__item-hd_show {
+  opacity: 0.4;
+}
+
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden;
+}
+
+.kind-list__item-bd_show {
+  height: auto;
+}
+.weui-flex__item{
+line-height: 42rpx
+}

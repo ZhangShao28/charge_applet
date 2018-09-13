@@ -1,0 +1,16 @@
+/* pages/protocol/protocol.wxss */
+.container{
+  background: #f8f8f8;
+  height:auto;
+}
+
+.rule_txt{
+  line-height: 50rpx;
+  margin-bottom: 30rpx
+}
+.rule_con_small{
+  margin-bottom: 20rpx
+}
+.rule_con {
+padding:0 0 0 50rpx;
+}

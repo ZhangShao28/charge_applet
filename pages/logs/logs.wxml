@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+
+    <canvas class="circle" style="width:200px; height:200px;" canvas-id="canvasArcCir">
+    </canvas>
+    <canvas class="circle" style="z-index: -5; width:200px; height:200px;" canvas-id="canvasCircle">
+    </canvas>
+    <view class="draw_btn" bindtap="drawCircle">开始动态绘制</view>

@@ -1,0 +1,9 @@
+<!--pages/switch/switch.wxml-->
+<template name="switch">
+ <view class='switchBox' bindtap='clickSwitch'> 
+  <image class='btn' src="{{switch_btn.btnsrc}}"></image>
+  <image class='round' animation="{{switch_btn.animationData}}" src="{{switch_btn.roundsrc}}"></image>
+ </view>
+</template>
+<!-- <template is="switch" data="{{item}}"/> -->
+

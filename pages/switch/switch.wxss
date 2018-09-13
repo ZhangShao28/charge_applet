@@ -1,0 +1,18 @@
+/* pages/switch/switch.wxss */
+.switchBox{
+  width: 81rpx;
+  height: 41rpx;
+  position: relative;
+  display: inline-block;
+}
+.switchBox .btn{
+  width: 81rpx;
+  height: 41rpx
+}
+.switchBox .round{
+  width: 78rpx;
+  height: 41rpx;
+  position: absolute;
+   /* right: -17rpx;  */
+  right: 20rpx 
+}

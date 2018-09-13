@@ -1,0 +1,59 @@
+<!--pages/rechargeMonth/rechargeMonth.wxml-->
+
+<view class='container'>
+  <view class='content'>
+    <view class='tit'>购买月卡 马上充电 <label class='use_day' wx:if='{{use_day}}'>可用 <label class='use_day_num'>{{remain_day}}</label> 天</label></view>
+    <view class='card_img'>
+      <image src='../../images/recharge/getstuck@2x.png'></image>
+        <view class='card_img_xqname'>{{xq_name}}月卡</view>
+      <view class='card_img_txt'>
+      <view class='float_l'>{{card_money}}元</view>
+      <view class='float_r'>{{useful_days}}天 , <label>{{use_times}}次/天</label></view>
+      </view>
+    </view> 
+  </view>
+   <view class='footer'>
+        <view class='footer_tit'>
+        <image class='dot' src='../../images/recharge/dot.png'></image>
+        该月卡只在{{xq_name}}使用。月卡生效期间，一天可使用{{use_times}}次充电服务，充满自动断电，未充满拔下充电器计为1次充电。
+        </view>
+        <view class='footer_tit'>
+        <image class='dot' src='../../images/recharge/dot.png'></image>
+         用户使用期间，若出现设备故障，故障报修审核成功后补偿1天的充电服务。
+        </view>
+         <view class='footer_tit'>
+        <image class='dot' src='../../images/recharge/dot.png'></image>
+        每张卡有效期为30天，若账户内月卡剩余天数大于{{limit_days}}天，则无法再次购买。
+        </view>
+         <view class='footer_tit'>
+        <image class='dot' src='../../images/recharge/dot.png'></image>
+        购卡成功后，相应费用不予退还。
+        </view>
+         <view style='margin-bottom:80rpx;opacity:0'>
+       ---
+        </view>
+    </view>
+    <view class='recharge_div'>
+      <form bindsubmit='go_payment' report-submit='true'>
+            <button  class='recharge_btn btn {{!is_can_buy?"btn_bcakground":""}}' bindtap='recharge_month_btn' form-type="submit" hover-class="none">
+            购  买
+            </button>
+      </form>
+    </view>
+</view>
+
+ <view class='select_box {{show_pay?"show_pay_box":""}}'> 
+ <view class='new_user' bindtap='go_newuser' wx:if='{{is_newuser}}'>{{new_title}}<image src='../../images/triangle@2x.png'></image></view>
+  <view class='payment_box'>
+    <view class='payment_list' bindtap='select_item' wx:for='{{payment_list}}' data-id='{{item.state}}' >
+    <view class='{{item.state==2&&no_use?"no_use":""}}'><image class='pay_img' src='{{item.pay_img}}'></image>{{item.txt}}<image class='select_img' src='{{item.img}}'></image></view>
+    </view>
+    
+  </view>
+  <view class=''>
+        <view wx:if='{{!mask_show}}' class='recharge_btn btn'  bindtap='{{recharge_btn?"recharge_btn":""}}' >购  买</view>
+      </view>
+  </view>
+<view class='mask' hidden='{{mask_show}}' bindtap='mask'>
+
+</view>

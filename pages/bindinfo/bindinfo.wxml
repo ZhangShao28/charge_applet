@@ -1,0 +1,42 @@
+<!--pages/bindinfo/bindinfo.wxml-->
+<view class='container'>
+   <!-- <form bindsubmit='next_btn' report-submit='true'> -->
+      <view class='tit'>
+        请填写您的资料
+        </view> 
+    <view class='header'>
+      
+        <view class='phone'>
+            <view class='left'>
+              手机号
+            </view>
+            <view class='right'>
+            <input type='number' maxlength='11' placeholder='请输入手机号' class='input' placeholder-style='color:#c8c9cc;font-size:32rpx' bindinput='user_phone'></input>
+            </view>
+              <view class='access_verify' wx:if='{{dis==0}}' bindtap='access_verify'>
+               {{verify_txt}}
+                </view>
+                <view class='access_verify'  wx:if='{{dis==1}}'>
+               {{verify_txt}}
+                </view>
+        </view>
+         <view class='verify'>
+            <view class='left'>
+              验证码
+            </view>
+            <view class='right'>
+            <input type='number' maxlength='6' placeholder='请输入验证码' class='input' bindblur="checkinput" placeholder-style='color:#c8c9cc;font-size:32rpx' bindinput='user_code'></input>
+            </view>
+        </view>
+        <view>
+        </view>
+    </view>
+    <!-- <view class='new_user'>绑定手机号，即可免费充电<label class='num'>3</label>次</view> -->
+    <view class='footer'>
+        <view class='button_btn btn' form-type="submit" hover-class="none"  disabled='{{dis_btn}}' bindtap='{{go_bindphone?"go_bindphone":""}}'>下一步</view>
+         <view class='protocol'>注册表示您已阅读，并同意《<label bindtap='go_protocol'>用户服务协议</label>》</view>
+     <!-- <image class='btn' src='../../images/Confirmtoadd@3x.png'></image> -->
+    </view>
+    <!-- </form> -->
+</view>
+

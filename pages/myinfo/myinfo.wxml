@@ -1,0 +1,70 @@
+<!--pages/myinfo/myinfo.wxml-->
+<view class='container'>
+  <view class='header'>
+    <image class='nav_bg' src='../../images/myinfo/Nav-Bar@3x.png'></image>
+    <view class='touxiang_info'>
+      <view class='tx_img'>
+      <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class='phone'>{{phone}}</view>
+      <!-- <image class='modifity' src='../../images/myinfo/modification@3x.png'></image> -->
+    </view>
+  </view>
+  <view class='content'>
+    <view class='my_wallet'>
+    <image class='wallet_img' src='../../images/myinfo/purse@3x.png'></image>
+    钱包
+    </view>
+      <view class='my_list {{is_new_reward==1?"":"my_list_none"}}'>
+        <view class='list_left'>
+          <view class='xq_name'>余额</view>
+          <view class='day_num' style='{{is_new_reward==1?"padding-bottom:10rpx":""}}'><label class='num'>{{money}}</label>元
+            <label class='wallet_detail' bindtap='go_wallet_detail'>明细</label> 
+            
+          </view>
+        </view>
+        <view class='list_right'>
+         <view class='go_recharge' bindtap='go_recharge' data-id='2'>去充值</view>
+        </view>
+        <view class='new_msg' wx:if='{{is_new_reward==1}}'> <text decode='{{true}}' space='{{true}}'>新人专享福利&nbsp;&nbsp;&nbsp;&nbsp;充值即送</text></view>
+        <view class='new_msg' wx:if='{{is_new_reward==2}}'>{{active_title}}</view>
+      </view>
+      <view class='my_list' wx:for='{{xq_list}}'>
+          <view class='list_left'>
+            <view class='xq_name'>{{item.card_name}}</view>
+            <view class='day_num'>剩余<label class='num'>{{item.remain_days}}</label>天</view>
+          </view>
+          <view class='list_right' style='{{item.is_can_buy=="y"?"display:inline-block":"display:none"}}'>
+            <view class='go_recharge' bindtap='go_recharge' data-xqid='{{item.xqid}}' data-id='1'>去续费</view>
+          </view>
+    </view>
+      
+      <view class='clearboth'></view>
+      
+  </view>
+  <!-- <view class='footers'>
+  暂无
+  </view> -->
+  <view>
+    <view class='footer'>
+     <view class="weui-cells weui-cells_after-title">
+            <navigator url="../myrechargelog/myrechargelog"  class="weui-cell weui-cell_access" hover-class="weui-cell_active" open-type="navigate">
+                <view class="weui-cell__bd">充电记录</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{is_charging}}</view>
+            </navigator>
+              <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">夜间消息推送</view>
+                <view class="weui-cell__ft">
+                 <switch type='' wx:key='*this' checked='{{switchChecked}}' bindchange="switchChange"/>  
+                </view>
+               
+            </view> 
+             <view class='send_text'>关闭推送后，22:00-次日7：00将不会收到推送消息</view>
+               <view bindtap='go_server_phone' wx:if='{{phone_switch=="y"}}' class="weui-cell weui-cell_access footer_bottom" hover-class="weui-cell_active" open-type="navigate">
+                <view class="weui-cell__bd">客服电话</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+      </view>
+    </view>
+  </view>
+</view>

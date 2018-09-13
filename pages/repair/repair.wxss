@@ -1,0 +1,197 @@
+/* pages/repair/repair.wxss */
+
+
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cells {
+  position: static;
+  margin-top: 0;
+  opacity: 0;
+  display: none;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.weui-cells:after, .weui-cells:before {
+  display: none;
+}
+
+.weui-cells_show {
+   display: block;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.weui-cell:before {
+  right: 15px;
+}
+
+.kind-list__item {
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5 
+}
+
+.kind-list__item:first-child {
+  margin-top: 0;
+}
+
+
+.kind-list__item-hd {
+  padding: 40rpx;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.kind-list__item-hd_show {
+  opacity: 0.4;
+}
+
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden;
+  width: 100%
+}
+
+.kind-list__item-bd_show {
+  height: auto;
+}
+.weui-flex__item{
+  font-size: 32rpx;
+  color: #333
+}
+.electrocar,.charging{
+  height: 301rpx;
+  background: #f8f8f8
+}
+.electrocar .list_box{
+  font-size: 30rpx;
+  border-radius: 36rpx;
+  border: 1rpx solid #666;
+  padding: 10rpx 35rpx;
+  margin-top: 61rpx;
+  display: inline-block;
+  margin-left: 30rpx
+}
+.charging .list_box{
+  font-size: 30rpx;
+  border-radius: 36rpx;
+  border: 1rpx solid #666;
+  padding: 10rpx 35rpx;
+  margin-top: 61rpx;
+  display: inline-block;
+  margin-left: 30rpx
+}
+.hardware{
+  background: #f8f8f8;
+  height: 480rpx;
+  text-align: center
+}
+.hardware image{
+  width: 290rpx;
+  height: 260rpx;
+  margin-top: 100rpx
+}
+.hardware .list_box{
+  font-size: 28rpx;
+  border-radius: 36rpx;
+  border: 1rpx solid #666;
+  padding: 7rpx 20rpx;
+  display: inline-block;
+}
+
+.hardware .b0{
+  position: absolute;
+  top: 80rpx;
+  left: 360rpx
+}
+.hardware .b1{
+  position: absolute;
+  top: 70rpx;
+  left: 65rpx
+}
+.hardware .b2{
+  position: absolute;
+  top: 170rpx;
+  left: 65rpx
+}
+.hardware .b3{
+  position: absolute;
+  top: 275rpx;
+  left: 65rpx
+}
+.hardware .b4{
+  position: absolute;
+  left: 280rpx;
+  bottom: 60rpx
+}
+.hardware .b5{
+  position: absolute;
+  top: 100rpx;
+}
+.hardware .b6{
+  position: absolute;
+  top: 190rpx;
+}
+.footer{
+  height: 300rpx;
+  background: #fff;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0  
+}
+.footer .submit_btn{
+  width: 601rpx;
+  margin: 28rpx auto
+}
+.footer .tit{
+  font-size: 26rpx;
+  color: #999
+}
+
+.footer .kefu_info{
+  text-align: center;
+  margin-top: 20rpx
+}
+.footer .kefu_left{
+  /* margin-left: 54rpx */
+}
+.footer .kefu_right{
+   margin-left: 20rpx 
+}
+.footer .kefu_left image,.container .kefu_right image{
+  width:31rpx;
+  height: 31rpx;
+  vertical-align: middle;
+}
+.footer .kefu_left label,.container .kefu_right label{
+  font-size: 28rpx;
+  margin-left: 15rpx
+}
+.kefu_btn{
+  position: relative;
+  left: -100rpx;
+  top: 15rpx;
+  opacity: 0
+}
+.electrocar .list_box_select,.charging .list_box_select,.hardware .list_box_select{
+  background: #FFBA37;
+  border: 1rpx solid #FFBA37;
+}
+.other textarea{
+  background: #f8f8f8;
+  border-radius: 4rpx;
+  margin: 0 auto 20rpx auto;
+  padding:10rpx;
+  width: 90%;
+  position: static
+}

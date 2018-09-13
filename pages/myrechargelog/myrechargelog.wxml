@@ -1,0 +1,86 @@
+            
+    <view class='container'>
+      <view class='head'>
+        <view class='head_tit'>
+            <label>记录</label>
+          </view>
+          <view class='charge_total'>
+            累计充电
+          </view>
+      </view>
+      <view class='charge_total_num'>
+            <view class='time'> 
+              <view class='time_num'>
+              {{hour}}
+              </view>
+              <view class='time_txt'>
+              小时（hour）
+              </view>
+            </view>
+          <view class='time'> 
+            <view class='time_num'>
+              {{minute}}
+              </view>
+              <view class='time_txt'>
+              分钟（min）
+              </view>
+          </view>
+      </view>
+    
+<view class="page__bd page__bd_spacing">
+                <view class="kind-list">
+                    <block wx:for="{{rechargelog}}" wx:key='rechargelog'>
+                        <view class="kind-list__item">
+                             <view id="{{item.k_id}}" class="weui-flex kind-list__item-hd" data-orderno='{{item.order_no}}' bindtap='go_rechargedetail' wx:if='{{item.status==1}}'>
+                                <view class="weui-flex__item"> 
+                                    <view><image class='dot' src='../../images/dot17.png'></image><label class='charge_time'>{{item.create_time}}</label>
+                                      <label class='charge_ing'>正在充电中
+                                      <image class='sanjiao' src='../../images/triangle@2x.png'></image></label>
+                                    </view>
+                                    <view>
+                                      <label class='charge_id'>设备ID<label class='id_txt'>{{item.device_id}}</label>{{item.pay_charge}}</label>
+                                    </view>
+                                </view>
+                                <!-- <image class="kind-list__img" src="images/icon_nav_{{item.id}}.png"></image> -->
+                            </view>
+
+                            <view id="{{item.k_id}}" class="weui-flex kind-list__item-hd " bindtap="kindToggle"  wx:else>
+                                <view class="weui-flex__item"> 
+                                    <view><image class='dot' src='../../images/dot17.png'></image><label class='charge_time'>{{item.create_time}}</label>
+                                      <label class='charge_end'> <block wx:if='{{item.status==2}}'>已结束</block>
+                                      <block wx:if='{{item.status==3}}'>退款</block>
+                                      <image class='sanjiao' src='../../images/triangle@2x.png ' wx:if='{{!item.open}}'></image>
+                                      <image class='sanjiao_open' src='../../images/triangle@2x.png' wx:else></image>
+                                      </label>
+                                    </view>
+                                    <view>
+                                      <label class='charge_id'>设备ID<label class='id_txt'>{{item.device_id}}</label>{{item.pay_charge}}</label>
+                                    </view>
+                                </view>
+                                <!-- <image class="kind-list__img" src="images/icon_nav_{{item.id}}.png"></image> -->
+                            </view>
+                            <view class="kind-list__item-bd {{item.open? 'kind-list__item-bd_show' : ''}}">
+                                <view class="weui-cells {{item.open? 'weui-cells_show' : ''}}">
+                                    <view class='charge_con'>
+                                      <view class='charge_con_time'>
+                                            <view class='time_num'>{{item.hour_minute_second}}</view>
+                                            <view class='time_txt'>充电时间</view>
+                                      </view>
+                                     <view class='charge_con_xqname'>
+                                            <view class='loc'><image src='../../images/Loc@2x.png'></image></view>
+                                            <view class='xq_name'>
+                                              <view>{{item.xq_name}}</view>
+                                              <view>{{item.place_name}}{{item.device_no}}</view>
+                                            </view>
+                                     </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+
+    </view> 
+            
+            

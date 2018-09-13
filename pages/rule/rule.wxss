@@ -1,0 +1,4 @@
+/* pages/rule/rule.wxss */
+.container{
+  background: #f8f8f8;
+}
